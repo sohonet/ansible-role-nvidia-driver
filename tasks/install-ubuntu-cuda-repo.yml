@@ -47,4 +47,5 @@
     state: "{{ nvidia_driver_package_state }}"
     autoremove: "{{ nvidia_driver_package_state == 'absent' }}"
     purge: "{{ nvidia_driver_package_state == 'absent' }}"
+  register: install_driver
   loop: "{{ nvidia_driver_ubuntu_packages }}"
